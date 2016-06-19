@@ -26,7 +26,7 @@ namespace NotificacaoImpacto
                 foreach (string pal in palavra)
                 {
                     
-                                if (verifica.Contains(pal))
+                                if (verifica.Contains(pal.ToUpper()))
                                 {                       
                                       elm.Add(new Elementos(Convert.ToString(arq), Convert.ToString(pal)));
                                       break;

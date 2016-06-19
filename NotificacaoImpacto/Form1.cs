@@ -107,14 +107,22 @@ namespace NotificacaoImpacto
 
             if (textBox_Diretorio.Text!="")
             {
-           
-                b.buscar_Diretorios(textBox_Diretorio.Text, listBoxColunaTabela.Items);
+                if(listBoxColunaTabela.Items.Count>0)
+                { 
+            
+                   b.buscar_Diretorios(textBox_Diretorio.Text, listBoxColunaTabela.Items);
                 
-                    label_execucao.Text = progressBar1.Value.ToString()+"%";
+                   label_execucao.Text = progressBar1.Value.ToString()+"%";
                     
                    FormRelatorio fr = new FormRelatorio();
 
                    fr.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Selecione uma tabela/coluna na lista: ", "Elemento não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBoxColunaTabela.Focus();
+                }
 
             }
             else
