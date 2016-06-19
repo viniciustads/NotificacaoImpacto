@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace NotificacaoImpacto
@@ -12,11 +13,17 @@ namespace NotificacaoImpacto
        
         
         public void buscar_Diretorios(string diretorio, ListBox.ObjectCollection palavra)
-        {           
-            string[] arquivos = Directory.GetFiles(diretorio, "*.fpr", SearchOption.AllDirectories);
-
+        {
             elm = new List<Elementos>();
-                    
+
+            var ext = new List<string> { "*.fpl","*.fpr"};
+            
+            foreach (string arx in ext)
+            {
+                Console.Write("DSDS" + arx);
+                string[] arquivos = Directory.GetFiles(diretorio, arx, SearchOption.AllDirectories);
+            
+                               
                 foreach (string arq in arquivos)
                 {
                     file = new StreamReader(arq);
@@ -34,8 +41,9 @@ namespace NotificacaoImpacto
                 }
 
                 file.Close();         
-                }                        
-         }
+                }
+            }
+        }
               
         public List<Elementos> GetElementos()
         {          
