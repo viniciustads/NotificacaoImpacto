@@ -9,7 +9,7 @@ namespace NotificacaoImpacto
     {
         private StreamReader file;
         public static List<Elementos> elm;
-        dddddd
+       
         
         public void buscar_Diretorios(string diretorio, ListBox.ObjectCollection palavra)
         {           
