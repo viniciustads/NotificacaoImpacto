@@ -1,13 +1,7 @@
 ﻿using NotificacaoImpacto.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace NotificacaoImpacto
@@ -40,7 +34,6 @@ namespace NotificacaoImpacto
             if(textBoxColunaTabela.Text != "")
             {
                 listBoxColunaTabela.Items.Add(textBoxColunaTabela.Text);                
-              //  MessageBox.Show(" Elemento adicionado na lista de pesquisa: " + textBoxColunaTabela.Text , " \n Adicionado com Sucesso" , MessageBoxButtons.OK, MessageBoxIcon.None);
                 textBoxColunaTabela.Clear();
             }
             else
@@ -83,22 +76,9 @@ namespace NotificacaoImpacto
             }
         }
 
-        private void checkBoxPdf_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxPdf.Checked)
-            {
-                checkBoxExcel.Checked = false;
-            }
-        }
+      
 
-        private void checkBoxExcel_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxExcel.Checked)
-            {
-                checkBoxPdf.Checked = false;
-            }
-            
-        }
+        
 
         private void buttonEmitir_Click(object sender, EventArgs e)
         {
@@ -112,7 +92,7 @@ namespace NotificacaoImpacto
             
                    b.buscar_Diretorios(textBox_Diretorio.Text, listBoxColunaTabela.Items);
                 
-                   label_execucao.Text = progressBar1.Value.ToString()+"%";
+                 
                     
                    FormRelatorio fr = new FormRelatorio();
 

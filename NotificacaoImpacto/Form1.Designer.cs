@@ -38,11 +38,7 @@
             this.pictureBoxEditar = new System.Windows.Forms.PictureBox();
             this.pictureBoxRemover = new System.Windows.Forms.PictureBox();
             this.listBoxColunaTabela = new System.Windows.Forms.ListBox();
-            this.checkBoxPdf = new System.Windows.Forms.CheckBox();
-            this.checkBoxExcel = new System.Windows.Forms.CheckBox();
             this.buttonEmitir = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label_execucao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdiconar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRemover)).BeginInit();
@@ -133,33 +129,9 @@
             this.listBoxColunaTabela.Size = new System.Drawing.Size(216, 95);
             this.listBoxColunaTabela.TabIndex = 8;
             // 
-            // checkBoxPdf
-            // 
-            this.checkBoxPdf.AutoSize = true;
-            this.checkBoxPdf.Location = new System.Drawing.Point(105, 229);
-            this.checkBoxPdf.Name = "checkBoxPdf";
-            this.checkBoxPdf.Size = new System.Drawing.Size(109, 17);
-            this.checkBoxPdf.TabIndex = 9;
-            this.checkBoxPdf.Text = "Relatório em PDF";
-            this.checkBoxPdf.UseVisualStyleBackColor = true;
-            this.checkBoxPdf.CheckedChanged += new System.EventHandler(this.checkBoxPdf_CheckedChanged);
-            // 
-            // checkBoxExcel
-            // 
-            this.checkBoxExcel.AutoSize = true;
-            this.checkBoxExcel.Checked = true;
-            this.checkBoxExcel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxExcel.Location = new System.Drawing.Point(220, 229);
-            this.checkBoxExcel.Name = "checkBoxExcel";
-            this.checkBoxExcel.Size = new System.Drawing.Size(114, 17);
-            this.checkBoxExcel.TabIndex = 10;
-            this.checkBoxExcel.Text = "Relatório em Excel";
-            this.checkBoxExcel.UseVisualStyleBackColor = true;
-            this.checkBoxExcel.CheckedChanged += new System.EventHandler(this.checkBoxExcel_CheckedChanged);
-            // 
             // buttonEmitir
             // 
-            this.buttonEmitir.Location = new System.Drawing.Point(370, 229);
+            this.buttonEmitir.Location = new System.Drawing.Point(370, 178);
             this.buttonEmitir.Name = "buttonEmitir";
             this.buttonEmitir.Size = new System.Drawing.Size(75, 23);
             this.buttonEmitir.TabIndex = 12;
@@ -167,32 +139,12 @@
             this.buttonEmitir.UseVisualStyleBackColor = true;
             this.buttonEmitir.Click += new System.EventHandler(this.buttonEmitir_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(-1, 258);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(444, 13);
-            this.progressBar1.TabIndex = 13;
-            // 
-            // label_execucao
-            // 
-            this.label_execucao.AutoSize = true;
-            this.label_execucao.Location = new System.Drawing.Point(449, 258);
-            this.label_execucao.Name = "label_execucao";
-            this.label_execucao.Size = new System.Drawing.Size(30, 13);
-            this.label_execucao.TabIndex = 14;
-            this.label_execucao.Text = "temp";
-            // 
             // Form_NotificaoImpacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 270);
-            this.Controls.Add(this.label_execucao);
-            this.Controls.Add(this.progressBar1);
+            this.ClientSize = new System.Drawing.Size(472, 230);
             this.Controls.Add(this.buttonEmitir);
-            this.Controls.Add(this.checkBoxExcel);
-            this.Controls.Add(this.checkBoxPdf);
             this.Controls.Add(this.listBoxColunaTabela);
             this.Controls.Add(this.pictureBoxRemover);
             this.Controls.Add(this.pictureBoxEditar);
@@ -225,11 +177,7 @@
         private System.Windows.Forms.PictureBox pictureBoxEditar;
         private System.Windows.Forms.PictureBox pictureBoxRemover;
         private System.Windows.Forms.ListBox listBoxColunaTabela;
-        private System.Windows.Forms.CheckBox checkBoxPdf;
-        private System.Windows.Forms.CheckBox checkBoxExcel;
         private System.Windows.Forms.Button buttonEmitir;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label_execucao;
     }
 }
 
