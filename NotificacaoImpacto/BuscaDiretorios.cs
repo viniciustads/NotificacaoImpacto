@@ -20,10 +20,9 @@ namespace NotificacaoImpacto
             
             foreach (string arx in ext)
             {
-                Console.Write("DSDS" + arx);
+                
                 string[] arquivos = Directory.GetFiles(diretorio, arx, SearchOption.AllDirectories);
-            
-                               
+                                           
                 foreach (string arq in arquivos)
                 {
                     file = new StreamReader(arq);
@@ -36,7 +35,7 @@ namespace NotificacaoImpacto
                                 if (verifica.Contains(pal.ToUpper()))
                                 {                       
                                       elm.Add(new Elementos(Convert.ToString(arq), Convert.ToString(pal)));
-                                      break;
+                                      //break;
                                 }                                
                 }
 
